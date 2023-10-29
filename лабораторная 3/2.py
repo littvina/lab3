@@ -1,0 +1,14 @@
+def find_common_participants(first, second, ar=','):
+    first_team = first.split(ar)
+    second_team = second.split(ar)
+    common = list(set(first_team).intersection(second_team))
+    common.sort()
+    return common
+
+
+participants_first_group = "Иванов|Петров|Сидоров"
+participants_second_group = "Петров|Сидоров|Смирнов"
+
+result = find_common_participants(participants_first_group, participants_second_group, '|')
+print("Общие участники:", result)
+
